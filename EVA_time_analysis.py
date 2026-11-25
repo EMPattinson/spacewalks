@@ -1,7 +1,7 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
 import pathlib
-data_f = open(pathlib.Path("EVA_data_NASA.json"), 'r')
-data_t = open(pathlib.Path("EVA_data_NASA.csv"),'w')
+data_f = open(pathlib.Path("EVA_data_NASA.json"), 'r', encoding="ascii")
+data_t = open(pathlib.Path("EVA_data_NASA.csv"),'w', encoding="utf-8")
 g_file = pathlib.Path("EVA_time_by_year.png")
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
