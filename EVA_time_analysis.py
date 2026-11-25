@@ -1,7 +1,8 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('/home/sarah/Projects/astronaut-analysis/data.json', 'r')
-data_t = open('/home/sarah/Projects/astronaut-analysis/data.csv','w')
-g_file = 'myplot.png'
+import pathlib
+data_f = open(pathlib.Path("EVA_data_NASA.json"), 'r')
+data_t = open(pathlib.Path("EVA_data_NASA.csv"),'w')
+g_file = pathlib.Path("EVA_time_by_year.png")
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
