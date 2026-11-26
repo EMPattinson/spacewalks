@@ -23,7 +23,7 @@ for i in range(375):
 ## Comment out this bit if you don't want the spreadsheet
 
 
-outfile_writer=csv.writer(output_file)
+outfile_writer = csv.writer(output_file)
 
 
 
@@ -41,9 +41,9 @@ for i in data:
             pass
         else:
             eva_duration_datetime = dt.datetime.strptime(eva_duration,'%H:%M')
-            eva_duration_seconds = dt.timedelta(hours=eva_duration_datetime.hour, minutes=eva_duration_datetime.minute, seconds=eva_duration_datetime.second).total_seconds()/(60*60)
-            print(eva_duration_datetime,eva_duration_seconds)
-            time.append(eva_duration_seconds)
+            eva_duration_hours = dt.timedelta(hours=eva_duration_datetime.hour, minutes=eva_duration_datetime.minute, seconds=eva_duration_datetime.second).total_seconds()/(60*60)
+            print(eva_duration_datetime,eva_duration_hours)
+            time.append(eva_duration_hours)
             if 'date' in data[j].keys():
                 date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
                 #date.append(data[j]['date'][0:10])
