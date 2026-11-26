@@ -1,3 +1,5 @@
+
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -130,4 +132,15 @@ def main(in_file, out_file, graph_file):
 
 if __name__ == "__main__":
 
-    main('./eva-data.json','./eva-data.csv','./cumulative_eva_graph.png')
+    if len(sys.argv) <= 3:
+        print("Using default filenames")
+        input_file = './eva-data.json'
+        output_file = './eva-data.csv'
+        graph_file = './cumulative_eva_graph.png'
+    else:    
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+        graph_file = sys.argv[3]
+        print("Using ",input_file," ",output_file," ",graph_file," as filenames")
+
+    main(input_file,output_file,graph_file)
