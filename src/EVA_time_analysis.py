@@ -134,9 +134,9 @@ if __name__ == "__main__":
 
     if len(sys.argv) <= 3:
         print("Using default filenames")
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
-        graph_file = './cumulative_eva_graph.png'
+        input_file = './data/raw/eva-data.json'
+        output_file = './data/results/eva-data.csv'
+        graph_file = './data/results/cumulative_eva_graph.png'
     else:    
         input_file = sys.argv[1]
         output_file = sys.argv[2]
